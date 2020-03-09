@@ -97,9 +97,7 @@ computed:{
         },0)
     },
       ibft_limit () {
-        return this.inputs.reduce((sum,p) => {
-            return parseInt(p.amount)  >= 666666.65 ? 500000 : parseInt(this.total/100) * 75
-        },0)
+            return this.total  >= 666666.65 ? 500000 : (this.total/100) * 75
     }
 },
 methods:{
